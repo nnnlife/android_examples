@@ -1,6 +1,8 @@
 package com.kross
 
 import android.os.Bundle
+import android.os.SystemClock
+import android.os.storage.StorageManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.kross.ui.theme.SystemAppSkelTheme
 
 class MainActivity : ComponentActivity() {
+    private lateinit var taskViewManager: TaskViewManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -26,13 +29,16 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        taskViewManager = TaskViewManager(this)
     }
 }
+
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hi $name!",
+        text = "Hello $name!",
         modifier = modifier
     )
 }

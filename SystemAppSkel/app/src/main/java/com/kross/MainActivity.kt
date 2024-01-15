@@ -1,8 +1,6 @@
 package com.kross
 
 import android.os.Bundle
-import android.os.SystemClock
-import android.os.storage.StorageManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        taskViewManager = TaskViewManager(this)
+        taskViewManager = TaskViewManager()
     }
 }
 

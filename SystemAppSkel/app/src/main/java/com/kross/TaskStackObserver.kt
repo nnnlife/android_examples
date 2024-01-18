@@ -7,6 +7,7 @@ import android.app.TaskStackListener
 import android.os.Handler
 import android.os.HandlerExecutor
 import android.os.RemoteException
+import com.android.wm.shell.sysui.ShellInit
 
 object TaskStackObserver : TaskStackListener() {
     private var initialized = false

@@ -1,4 +1,4 @@
-package com.kross.ui.theme
+package com.home.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

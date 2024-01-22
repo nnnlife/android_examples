@@ -12,11 +12,11 @@ android {
             keyPassword = "android"
         }
     }
-    namespace = "com.kross"
+    namespace = "com.adot.home"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.kross"
+        applicationId = "com.adot.home"
         minSdk = 33
         targetSdk = 33
         versionCode = 1
@@ -63,12 +63,15 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+
     implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    implementation(files("libs/WindowManager-Shell-0.1.aar"))
+    implementation(files("libs/WindowManager-Shell.aar"))
+    implementation(files("libs/iconloader_base.aar"))
 }
